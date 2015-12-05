@@ -16,8 +16,8 @@ class Game(State):
         mw = 63
         mh = 44
         f = 1000
-        c = 50
-        r = 20
+        c = 100
+        r = 100
         self.world.generateMap(mw,mh,f,c,r)
         self.screen = pygame.display.get_surface()
         self.background = pygame.Surface((1000, 1000))
@@ -50,6 +50,7 @@ class Game(State):
                     a = Actor(color=5)
                     a.setPosition(x*16,y*16)
                     self.mapList.append(a)
+
 
     def check_events(self):
         for ev in pygame.event.get():
